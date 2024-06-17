@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="project-2-sw-5-com-tutorialsninja-smita(failed)">
+    <classes>
+      <class name="com.tutorialsninja.demo.testsuite.LaptopsAndNotebooksPageTest">
+        <methods>
+          <include name="verifyProductsPriceDisplayHighToLowSuccessfully"/>
+          <include name="inIt"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.tutorialsninja.demo.testsuite.LaptopsAndNotebooksPageTest -->
+    </classes>
+  </test> <!-- project-2-sw-5-com-tutorialsninja-smita(failed) -->
+</suite> <!-- Failed suite [Default Suite] -->
