@@ -12,7 +12,7 @@
 <body>
 <h1>Login Test</h1>
 <p>
-  Test duration: 72.039s
+  Test duration: 47.953s
 </p>
 
 
@@ -25,57 +25,86 @@
             
 <tr>
   <td class="method">
-                  verifyProductAddedToShoppingCartSuccessFully
+                  verifyProductAddedToShoppingCartSuccessFullyWithData
       </td>
   <td class="duration">
-    42.705s
+    18.889s
   </td>
   <td class="result">
         
+          <i>Method arguments: </i><span class="arguments">"HP LP3065", "1", "Success: You have added HP LP3065 to your shopping cart!", "HP LP3065", "Product 21", "£74.73"</span><br />
     
             <div class="testOutput">
-                        Click on desktop [[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; link text: Desktops]<br />
-                                Select Show AllDesktops from []<br />
-                                Click on desktop [[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; xpath: //span[contains(text(),&apos;Currency&apos;)]]<br />
-                                Select £ Pound Sterling from [[[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; xpath: //ul[@class = &apos;dropdown-menu&apos;]/li], [[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; xpath: //ul[@class = &apos;dropdown-menu&apos;]/li], [[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; xpath: //ul[@class = &apos;dropdown-menu&apos;]/li]]<br />
-                                Click on desktop [[ChromeDriver: chrome on windows (f328577f7a75c4cc04f2cb6e7fed3b49)] -&gt; link text: Desktops]<br />
-                                Select Show AllDesktops from []<br />
+                        Click on desktop [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; link text: Desktops]<br />
+                                Select Show AllDesktops from [[[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
+                                Select Name (A - Z) to sort by [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; id: input-sort]<br />
+                                Click on HP LP3065<br />
+                                Clear the text on [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; xpath: //input[@id=&apos;input-quantity&apos;]]<br />
+                                Click on [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; id: button-cart]<br />
+                                Get [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; xpath: //div[@class=&apos;alert alert-success alert-dismissible&apos;]]<br />
+                                Click on [[ChromeDriver: chrome on windows (ec42d189e7c17edbf400403111a61129)] -&gt; xpath: //a[normalize-space()=&apos;shopping cart&apos;]]<br />
                   </div>
     
 
-        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#input\-sort&quot;}<br/>
-&nbsp; (Session info: chrome=126.0.6478.61)<br/>
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception<br/>
-Build info: version: &apos;4.21.0&apos;, revision: &apos;79ed462ef4&apos;<br/>
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.8&apos;<br/>
-Driver info: org.openqa.selenium.chrome.ChromeDriver<br/>
-Command: [f328577f7a75c4cc04f2cb6e7fed3b49, findElement {value=input-sort, using=id}]<br/>
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.61, chrome: {chromedriverVersion: 126.0.6478.61 (8dc092df54ce..., userDataDir: C:\Users\smita\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64718}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64718/devtoo..., se:cdpVersion: 126.0.6478.61, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}<br/>
-Session ID: f328577f7a75c4cc04f2cb6e7fed3b49</b></a><br />
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;com.tutorialsninja.demo.pages.ShoppingCartPage.getShoppingCartHeading()&quot; because &quot;this.shoppingCartPage&quot; is null</b></a><br />
     <div class="stackTrace" id="exception-0">
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)<br />
-              java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)<br />
-              java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)<br />
-              java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)<br />
-              java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)<br />
-              org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)<br />
-              org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)<br />
-              org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)<br />
-              org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)<br />
-              org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)<br />
-              org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)<br />
-              org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)<br />
-              org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)<br />
-              org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)<br />
-              jdk.proxy2/jdk.proxy2.$Proxy17.getTagName(Unknown Source)<br />
-              org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:43)<br />
-              com.tutorialsninja.demo.utilities.Utility.selectByVisibleTextFromDropDown(Utility.java:148)<br />
-              com.tutorialsninja.demo.pages.DesktopPage.sortByProducts(DesktopPage.java:97)<br />
-              com.tutorialsninja.demo.testsuite.DesktopsTest.verifyProductAddedToShoppingCartSuccessFully(DesktopsTest.java:101)<br />
+              com.tutorialsninja.demo.testsuite.DesktopsTest.verifyProductAddedToShoppingCartSuccessFullyWithData(DesktopsTest.java:185)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
+              java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.base/java.lang.reflect.Method.invoke(Method.java:568)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)<br />
+              java.base/java.util.ArrayList.forEach(ArrayList.java:1511)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:739)<br />
+              org.testng.TestRunner.run(TestRunner.java:614)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:421)<br />
+              org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)<br />
+              org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)<br />
+              org.testng.SuiteRunner.run(SuiteRunner.java:312)<br />
+              org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)<br />
+              org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)<br />
+              org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)<br />
+              org.testng.TestNG.runSuitesLocally(TestNG.java:1208)<br />
+              org.testng.TestNG.runSuites(TestNG.java:1112)<br />
+              org.testng.TestNG.run(TestNG.java:1079)<br />
+              com.intellij.rt.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:65)<br />
+              com.intellij.rt.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:105)<br />
+                </div>
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  verifyProductAddedToShoppingCartSuccessFullyWithData
+      </td>
+  <td class="duration">
+    18.916s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"Sony VAIO", "1", "Success: You have added Sony VAIO to your shopping cart!", "Sony VAIO", "Product 19", "£736.23"</span><br />
+    
+            <div class="testOutput">
+                        Click on desktop [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; link text: Desktops]<br />
+                                Select Show AllDesktops from [[[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
+                                Select Name (A - Z) to sort by [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; id: input-sort]<br />
+                                Click on Sony VAIO<br />
+                                Clear the text on [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; xpath: //input[@id=&apos;input-quantity&apos;]]<br />
+                                Click on [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; id: button-cart]<br />
+                                Get [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; xpath: //div[@class=&apos;alert alert-success alert-dismissible&apos;]]<br />
+                                Click on [[ChromeDriver: chrome on windows (a87b63245d84d1997e93e81b28b08ee7)] -&gt; xpath: //a[normalize-space()=&apos;shopping cart&apos;]]<br />
+                  </div>
+    
+
+        <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException: Cannot invoke &quot;com.tutorialsninja.demo.pages.ShoppingCartPage.getShoppingCartHeading()&quot; because &quot;this.shoppingCartPage&quot; is null</b></a><br />
+    <div class="stackTrace" id="exception-1">
+              com.tutorialsninja.demo.testsuite.DesktopsTest.verifyProductAddedToShoppingCartSuccessFullyWithData(DesktopsTest.java:185)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)<br />
               java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -109,95 +138,6 @@ Session ID: f328577f7a75c4cc04f2cb6e7fed3b49</b></a><br />
       </table>
 
 
-  <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
-          <tr>
-        <td colspan="3" class="group">com.tutorialsninja.demo.testsuite.DesktopsTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  verifyProductArrangeInAlphaBaticalOrder
-      </td>
-  <td class="duration">
-    2.269s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        Click on desktop [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; link text: Desktops]<br />
-                                Select Show AllDesktops from [[[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
-                                Select Name (Z - A) to sort by [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; id: input-sort]<br />
-                                Get all products [[[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a], [[ChromeDriver: chrome on windows (be97a68606894075d3d7bc7193ae47bf)] -&gt; xpath: //div[@class=&apos;caption&apos;]//h4/a]]<br />
-                                Get all product in reverse order [iPod Classic, iPhone, Sony VAIO, Samsung SyncMaster 941BW, Product 8, Palm Treo Pro, MacBook Air, MacBook, HTC Touch HD, HP LP3065, Canon EOS 5D, Apple Cinema 30&quot;]<br />
-                  </div>
-    
-
-      </td>
-</tr>
-          <tr>
-        <td colspan="3" class="group">com.tutorialsninja.demo.testsuite.TopMenuTest</td>
-      </tr>
-            
-<tr>
-  <td class="method">
-                  verifyUserShouldNavigateToComponentsPageSuccessfully
-      </td>
-  <td class="duration">
-    0.815s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        Click on components [[ChromeDriver: chrome on windows (b41cad4763b42b18d6e7f21deca72b0b)] -&gt; link text: Components]<br />
-                                Select Show AllComponents from [[[ChromeDriver: chrome on windows (b41cad4763b42b18d6e7f21deca72b0b)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (b41cad4763b42b18d6e7f21deca72b0b)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
-                                Get component text[[ChromeDriver: chrome on windows (b41cad4763b42b18d6e7f21deca72b0b)] -&gt; xpath: //h2[contains(text(),&apos;Components&apos;)]]<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  verifyUserShouldNavigateToDesktopsPageSuccessfully
-      </td>
-  <td class="duration">
-    1.455s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        Click on desktop [[ChromeDriver: chrome on windows (ae1d428ad667f25b8efef5c0fda9e51d)] -&gt; link text: Desktops]<br />
-                                Select Show AllDesktops from [[[ChromeDriver: chrome on windows (ae1d428ad667f25b8efef5c0fda9e51d)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (ae1d428ad667f25b8efef5c0fda9e51d)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
-                                Get desktop text[[ChromeDriver: chrome on windows (ae1d428ad667f25b8efef5c0fda9e51d)] -&gt; xpath: //h2[contains(text(),&apos;Desktops&apos;)]]<br />
-                  </div>
-    
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  verifyUserShouldNavigateToLaptopsAndNotebooksPageSuccessfully
-      </td>
-  <td class="duration">
-    1.146s
-  </td>
-  <td class="result">
-        
-    
-            <div class="testOutput">
-                        Click on laptops and notebooks [[ChromeDriver: chrome on windows (e58e01e7f86ec4ac665f34a9b2512548)] -&gt; link text: Laptops &amp; Notebooks]<br />
-                                Select Show AllLaptops &amp; Notebooks from [[[ChromeDriver: chrome on windows (e58e01e7f86ec4ac665f34a9b2512548)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*], [[ChromeDriver: chrome on windows (e58e01e7f86ec4ac665f34a9b2512548)] -&gt; xpath: //nav[@id=&apos;menu&apos;]//ul/li[contains(@class, &apos;open&apos;)]/div/child::*]]<br />
-                                Get text [[ChromeDriver: chrome on windows (e58e01e7f86ec4ac665f34a9b2512548)] -&gt; xpath: //h2[contains(text(),&apos;Laptops &amp; Notebooks&apos;)]]<br />
-                  </div>
-    
-
-      </td>
-</tr>
-      </table>
   
 </body>
 </html>

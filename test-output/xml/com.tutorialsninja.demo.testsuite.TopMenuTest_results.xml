@@ -4,12 +4,12 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="3.416">
+           time="3.817">
   <properties />
   
   
-            <testcase name="verifyUserShouldNavigateToDesktopsPageSuccessfully" time="1.455" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
-                <testcase name="verifyUserShouldNavigateToLaptopsAndNotebooksPageSuccessfully" time="1.146" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
-                <testcase name="verifyUserShouldNavigateToComponentsPageSuccessfully" time="0.815" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
+            <testcase name="verifyUserShouldNavigateToDesktopsPageSuccessfully" time="1.218" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
+                <testcase name="verifyUserShouldNavigateToComponentsPageSuccessfully" time="1.338" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
+                <testcase name="verifyUserShouldNavigateToLaptopsAndNotebooksPageSuccessfully" time="1.261" classname="com.tutorialsninja.demo.testsuite.TopMenuTest" />
       
 </testsuite>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sanity Suites" verbose="1" >
+<suite name="Runners Suites" verbose="1" >
     <groups>
         <run>
-            <include name="sanity"></include>
+            <include name="runners"></include>
         </run>
     </groups>
     <listeners>
@@ -13,10 +13,7 @@
     </listeners>
     <test name="Login Test" >
         <classes>
-            <class name="com.tutorialsninja.demo.testsuite.TopMenuTest"/>
             <class name="com.tutorialsninja.demo.testsuite.DesktopsTest"/>
-            <class name="com.tutorialsninja.demo.testsuite.LaptopsAndNotebooksPageTest"/>
-            <class name="com.tutorialsninja.demo.testsuite.MyAccountsTest"></class>
         </classes>
     </test>
 </suite>

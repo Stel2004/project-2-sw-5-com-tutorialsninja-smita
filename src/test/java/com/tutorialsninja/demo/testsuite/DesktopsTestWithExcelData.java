@@ -36,15 +36,13 @@ public class DesktopsTestWithExcelData extends TestBase {
 
     @Test(dataProvider = "dataFromExcel")
     public void verifyProductAddedToShoppingCartSuccessFully(String product, String qty, String successMessage, String productName, String model, String total){
-        //
         //2.1 Mouse hover on Currency Dropdown and click
-        //homePage.mouseHoverOnLink(homePage.currency);
-
+        homePage.clickOnElement(desktopPage.currencyDropdown);
         //2.2 Mouse hover on £Pound Sterling and click
-        homePage.selectCurrency(homePage.currency);
+        homePage.clickOnElement(desktopPage.poundSterling);
 
         //2.3 Mouse hover on Desktops Tab.
-        homePage.mouseHoverOnDesktopsLink();
+        homePage.mouseHoverOnDesktopsLinkAndClick();
 
         // 2.4 Click on “Show All Desktops”
         homePage.selectMenu("Show AllDesktops");

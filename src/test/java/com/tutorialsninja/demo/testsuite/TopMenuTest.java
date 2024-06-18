@@ -48,7 +48,7 @@ public class TopMenuTest extends TestBase {
         softAssert = new SoftAssert();
     }
 
-    @Test(groups = {"sanity","regression"})
+    @Test(groups = {"sanity","smoke","regression"})
     public void verifyUserShouldNavigateToDesktopsPageSuccessfully() {
         homePage.mouseHoverOnDesktopsLinkAndClick();
         homePage.selectMenu("Show AllDesktops");
@@ -67,7 +67,7 @@ public class TopMenuTest extends TestBase {
         softAssert.assertAll();
     }
 
-    @Test(groups = {"sanity","regression"})
+    @Test(groups = {"regression"})
     public void verifyUserShouldNavigateToComponentsPageSuccessfully() {
         homePage.mouseHoverOnComponentLinkAndClick();
         homePage.selectMenu("Show AllComponents");

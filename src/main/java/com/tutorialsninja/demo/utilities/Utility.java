@@ -25,7 +25,6 @@ public class Utility extends ManageBrowser {
      */
     public int generateRandomNumber() {
         return (int) (Math.random() * 5000 + 1);
-
     }
 
     /**

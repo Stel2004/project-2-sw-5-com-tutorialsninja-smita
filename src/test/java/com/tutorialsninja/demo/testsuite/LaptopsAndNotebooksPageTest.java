@@ -3,7 +3,6 @@ package com.tutorialsninja.demo.testsuite;
 import com.tutorialsninja.demo.customlisteners.CustomListeners;
 import com.tutorialsninja.demo.pages.*;
 import com.tutorialsninja.demo.testbase.TestBase;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -66,7 +65,7 @@ public class LaptopsAndNotebooksPageTest extends TestBase {
         softAssert = new SoftAssert();
     }
 
-    @Test(groups = {"sanity","regression"})
+    @Test(groups = {"sanity","smoke","regression"})
     public void verifyProductsPriceDisplayHighToLowSuccessfully() throws InterruptedException {
         homePage.clickOnElement(desktopPage.currencyDropdown);
         homePage.clickOnElement(desktopPage.poundSterling);
@@ -103,20 +102,21 @@ public class LaptopsAndNotebooksPageTest extends TestBase {
         //2.3 Select Sort By "Price (High > Low)"
         laptopsAndNotebooksPage.selectSortByOption("Price (High > Low)");
         //2.4 Select Product “MacBook”
-        laptopsAndNotebooksPage.selectProductByName("MacBook");
+        laptopsAndNotebooksPage.selectProductByName("HP LP3065");
         //2.5 Verify the text “MacBook”
-        homePage.softAssert(productPage.getProductText(), "MacBook", "MacBook Product not display");
+        softAssert.assertEquals(productPage.getProductText(), "HP LP3065", "MacBook Product not display");
         //2.6 Click on ‘Add To Cart’ button
         productPage.clickOnAddToCartButton();
         //2.7 Verify the message “Success: You have added MacBook to your shopping cart!”
-        Assert.assertTrue(productPage.getProductAddedSuccessMessage().contains("Success: You have added MacBook to your shopping cart!"),
+        softAssert.assertTrue(productPage.getProductAddedSuccessMessage().contains("Success: You have added MacBook to your shopping cart!"),
                 "Product not added to cart");
         //2.8 Click on link “shopping cart” display into success message
         productPage.clickOnShoppingCartLinkIntoMessage();
         //2.9 Verify the text "Shopping Cart"
-        Assert.assertTrue(cartPage.getShoppingCartText().contains("Shopping Cart"));
+        softAssert.assertTrue(cartPage.getShoppingCartText().contains("Shopping Cart"), "Shopping Cart not matched");
         //2.10 Verify the Product name "MacBook"
-        homePage.softAssert(cartPage.getProductName(), "MacBook", "Product name not matched");
+        String actualProductName = desktopPage.getVerificationText(cartPage.productName);
+        softAssert.assertEquals(actualProductName, "HP LP3065", "Product name not matched");
         //2.11 Change Quantity "2"
         cartPage.changeQuantity("2");
         //2.12 Click on “Update” Tab
@@ -124,7 +124,7 @@ public class LaptopsAndNotebooksPageTest extends TestBase {
         //2.13 Verify the message “Success: You have modified your shopping cart!”
         softAssert.assertTrue(cartPage.getSuccessModifiedMessage().contains("Success: You have modified your shopping cart!"));
         //2.14 Verify the Total £737.45
-        homePage.softAssert(cartPage.getTotal(), "£737.45", "Total not matched");
+        softAssert.assertEquals(cartPage.getTotal(), "£149.45", "Total not matched");
         //2.15 Click on “Checkout” button
         homePage.clickOnElement(laptopsAndNotebooksPage.clickOnCheckout);
         //2.16 Verify the text “Checkout”
@@ -144,14 +144,21 @@ public class LaptopsAndNotebooksPageTest extends TestBase {
         laptopsAndNotebooksPage.enterTheMandatoryField(laptopsAndNotebooksPage.Address1,"Wembley");
         laptopsAndNotebooksPage.enterTheMandatoryField(laptopsAndNotebooksPage.city, "London");
         laptopsAndNotebooksPage.enterTheMandatoryField(laptopsAndNotebooksPage.postcode, "HA9 7AX");
-        laptopsAndNotebooksPage.enterTheMandatoryField(laptopsAndNotebooksPage.state, "United Kingdom");
+        laptopsAndNotebooksPage.enterState();
 
         //2.21 Click on “Continue” Button
-
+        laptopsAndNotebooksPage.clickOnContinueButton();
+        //laptopsAndNotebooksPage.clickOnCheckoutOptionContinueButton();
         //2.22 Add Comments About your order into text area
+        laptopsAndNotebooksPage.enterComment();
+        laptopsAndNotebooksPage.clickOnContinueAfterComment();
+        Thread.sleep(1000);
         //2.23 Check the Terms & Conditions check box
+        laptopsAndNotebooksPage.clickOnAgreeTermsConditionCheckbox();
+        Thread.sleep(1000);
         //2.24 Click on “Continue” button
         //2.25 Verify the message “Warning: Payment method required!”
+        laptopsAndNotebooksPage.clickOnPaymentMethodCont();
         softAssert.assertAll();
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="testsuite" verbose="1" >
+<suite name="Smoke Suites" verbose="1" >
     <groups>
         <run>
             <include name="smoke"></include>
@@ -15,8 +15,8 @@
         <classes>
             <class name="com.tutorialsninja.demo.testsuite.TopMenuTest"/>
             <class name="com.tutorialsninja.demo.testsuite.DesktopsTest"/>
-            <class name="com.tutorialsninja.demo.testsuite.TopMenuTest"/>
-
+            <class name="com.tutorialsninja.demo.testsuite.LaptopsAndNotebooksPageTest"/>
+            <class name="com.tutorialsninja.demo.testsuite.MyAccountsTest"></class>
         </classes>
     </test>
 </suite>

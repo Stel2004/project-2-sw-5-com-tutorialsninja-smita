@@ -133,6 +133,26 @@ public class LaptopsAndNotebooksPage extends Utility {
     @FindBy(name = "comment")
     public WebElement enterComment;
 
+    @CacheLookup
+    @FindBy(id = "button-account")
+    WebElement checkoutOptContButton;
+
+    @CacheLookup
+    @FindBy(xpath = "//input[@name='agree']")
+    WebElement agreeTermsConditionCheckbox;
+
+    @CacheLookup
+    @FindBy(id = "button-payment-method")
+    WebElement paymentMethodContinueButton;
+
+    @CacheLookup
+    @FindBy(id = "button-confirm")
+    WebElement confirmButton;
+
+    @CacheLookup
+    @FindBy(xpath = "//h1[text()='Your order has been placed!']")
+    WebElement orderPlacedText;
+
     public String getLaptopsAndNotebooksText() {
         // Reports and Log
         CustomListeners.test.log(Status.PASS,"Get text " + laptopsAndNotebooksText);
@@ -189,6 +209,47 @@ public class LaptopsAndNotebooksPage extends Utility {
         sendTextToElement(element, value);
     }
 
+    public void enterState() {
+        selectByValueFromDropDown(state, "3553");
+    }
+
+    public void clickOnCheckoutOptionContinueButton() {
+        Reporter.log("click on " + checkoutOptContButton.toString());
+        CustomListeners.test.log(Status.PASS, "click on " + checkoutOptContButton);
+        clickOnElement(checkoutOptContButton);
+    }
+
+    public void clickOnAgreeTermsConditionCheckbox() {
+        Reporter.log("click on " + agreeTermsConditionCheckbox.toString());
+        CustomListeners.test.log(Status.PASS, "click on " + agreeTermsConditionCheckbox);
+        clickOnElement(agreeTermsConditionCheckbox);
+    }
+
+    public void clickOnPaymentMethodCont() {
+        Reporter.log("click on " + paymentMethodContinueButton.toString());
+        CustomListeners.test.log(Status.PASS, "click on " + paymentMethodContinueButton);
+        clickOnElement(paymentMethodContinueButton);
+    }
+
+    public void clickOnContinueButton() {
+        clickOnElement(clickOnCon);
+    }
+
+    public void clickOnContinueAfterComment() {
+        clickOnElement(continueButtonAfterComment);
+    }
+
+    public void enterComment() {
+        sendTextToElement(enterComment, "I want a macbook");
+    }
+
+    public void clickOnConfirmButton() {
+        clickOnElement(confirmButton);
+    }
+
+    public String verifyOrderPlaced() {
+        return getTextFromElement(orderPlacedText);
+    }
 
 
 }

@@ -50,6 +50,11 @@ public class HomePage extends Utility {
     @FindBy(xpath = "//div[@id='top-links']//li[contains(@class,'open')]/ul/li")
     List<WebElement> myAccountOptions;
 
+    @CacheLookup
+    @FindBy(xpath = "//ul[@class='dropdown-menu dropdown-menu-right']/li")
+    List<WebElement> selectMultipleElementFromDropdown;
+
+
     public void selectMenu(String menu) {
         // Reports and Log
         CustomListeners.test.log(Status.PASS,"Select option " + menu);
@@ -64,20 +69,6 @@ public class HomePage extends Utility {
         } catch (StaleElementReferenceException e) {
             topMenuList = topMenu;
         }
-    }
-
-    public void mouseHoverOnLink(WebElement menu){
-        mouseHoverToElement(menu);
-        // Reports and Log
-        CustomListeners.test.log(Status.PASS,"Click on desktop " + menu);
-        Reporter.log("Click on desktop " + menu.toString());
-    }
-
-    public void mouseHoverOnDesktopsLink() {
-        mouseHoverToElement(desktopLink);
-        // Reports and Log
-        CustomListeners.test.log(Status.PASS,"Click on desktop " + desktopLink);
-        Reporter.log("Click on desktop " + desktopLink.toString());
     }
 
     public void mouseHoverOnDesktopsLinkAndClick() {
@@ -99,6 +90,26 @@ public class HomePage extends Utility {
         Reporter.log("Click on components " + componentsLinks.toString());
     }
 
+    public void selectMyAccountOptions(String option) {
+        List<WebElement> myAccountList = getListOfElements(myAccountOptions);
+        try {
+            for (WebElement options : myAccountList) {
+                if (options.getText().equalsIgnoreCase(option)) {
+                    options.click();
+                }
+            }
+        } catch (StaleElementReferenceException e) {
+            myAccountList = getListOfElements(myAccountOptions);
+        }
+    }
+
+    public void clickOnMyAccountTab() {
+        clickOnElement(myAccountTab);
+        // Reports and Log
+        CustomListeners.test.log(Status.PASS,"Click on my account " + myAccountTab);
+        Reporter.log("Click on my account " + myAccountTab.toString());
+    }
+
     public void selectCurrency(String currency) {
         clickOnElement(currencyTab);
         List<WebElement> listOfElements = getListOfElements(currencyList);
@@ -114,26 +125,7 @@ public class HomePage extends Utility {
         // Reports and Log
         CustomListeners.test.log(Status.PASS,"Select option " + currency);
         Reporter.log("Select " + currency +" from " + currencyList.toString());
-
     }
 
-    public void clickOnMyAccountTab() {
-        clickOnElement(myAccountTab);
-        // Reports and Log
-        CustomListeners.test.log(Status.PASS,"Click on my account " + myAccountTab);
-        Reporter.log("Click on my account " + myAccountTab.toString());
-    }
 
-    public void selectMyAccountOptions(String option) {
-        List<WebElement> myAccountList = getListOfElements(myAccountOptions);
-        try {
-            for (WebElement options : myAccountList) {
-                if (options.getText().equalsIgnoreCase(option)) {
-                    options.click();
-                }
-            }
-        } catch (StaleElementReferenceException e) {
-            myAccountList = getListOfElements(myAccountOptions);
-        }
-    }
 }
